@@ -1,0 +1,27 @@
+$body-background:		#ebebeb;
+$article-background:	#fefefe;
+
+.body
+{
+	background: $body-background;
+}
+
+
+
+/***********************************************************************************/
+/* Articles */
+
+.article
+{
+	background: $article-background;
+	margin: 10px auto;
+	width: 70%;
+	padding: 17px 25px;
+
+	@include border-radius(5px);
+}
+
+.head-article
+{
+	border-bottom: 2px $body-background;
+}

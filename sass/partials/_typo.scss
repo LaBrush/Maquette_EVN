@@ -13,7 +13,7 @@ $liensSurvoles: inherit;
 /* Taille et police par défaut */
 body
 {
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'Noto Sans', arial, sans-serif;
     color: $texte;
     text-align: left ;
@@ -30,12 +30,12 @@ body
 .mini-majuscules  { font-variant:     small-caps;}
 
 /* Titres */
-h1, .h1 { font-size: 2.2em;  font: bold; }
-h2, .h2 { font-size: 1.5em; }
-h3, .h3 { font-size: 1.4em; }
-h4, .h4 { font-size: 1.1em; }
-h5, .h5 { font-size: 0.8em; }
-h6, .h6 { font-size: 0.8em; }
+h1, .h1 { font-size: 25px;  font: bold; }
+h2, .h2 { font-size: 20px; }
+h3, .h3 { font-size: 18px; }
+h4, .h4 { font-size: 16px; }
+h5, .h5 { font-size: 15px; }
+h6, .h6 { font-size: 14px; }
 
 
 /* Liens */
