@@ -5,8 +5,12 @@
 }
 
 
+
+
 /* Hr */
 $hr-green: #2ccc6f;
+$hr-red:   #e94c3d;
+$hr-blue:  #8f5bff;
 
 @mixin hr
 {
@@ -15,6 +19,7 @@ $hr-green: #2ccc6f;
 	display: block;
 	padding: 0px;
 	margin: 0px;
+	text-align: left;
 }
 
 .hr-green
@@ -25,18 +30,39 @@ $hr-green: #2ccc6f;
 	width: 120px;
 }
 
+.hr-red
+{
+	@include hr;
+	border: 2px solid $hr-red;
+
+	width: 120px;
+}
+
+.hr-blue
+{
+	@include hr;
+	border: 2px solid $hr-blue;
+
+	width: 120px;
+}
+
+
+
 
 /* Buttons */
-$details: #2ccc6f;
+$details:     #2ccc6f;
+$EDT-red: 	  #e94c3d;
+$EDT-blue:    #8f5bff;
 $button-text: #fefefe;
 
 @mixin button
 {
 	border: none;
 	@include border-radius(100px);
-	padding: 4px;
+	padding: 4px 10px;
 	color: $button-text;
 	font-size: 0.8em;
+	cursor: pointer;
 }
 
 .details
@@ -49,3 +75,26 @@ $button-text: #fefefe;
 		background: darken($details, 20%);
 	}
 }
+
+.EDT-red
+{
+	@include button;
+	background: $EDT-red;
+
+	&:hover, &:focus, &:active
+	{
+		background: darken($EDT-red, 20%);
+	}
+}
+
+.EDT-blue
+{
+	@include button;
+	background: $EDT-blue;
+
+	&:hover, &:focus, &:active
+	{
+		background: darken($EDT-blue, 20%);
+	}
+}
+

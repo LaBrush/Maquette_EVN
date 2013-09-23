@@ -1,5 +1,4 @@
 $body-background:		#ebebeb;
-$article-background:	#fefefe;
 
 
 .body
@@ -11,11 +10,13 @@ $article-background:	#fefefe;
 
 /***********************************************************************************/
 /* Articles */
+$article-background:	#fefefe;
+$extract:              #e6e6e6;
 
 .article
 {
 	background: $article-background;
-	margin: 10px auto;
+	margin: 15px auto;
 	width: 70%;
 	max-width: 800px;
 
@@ -56,16 +57,37 @@ $article-background:	#fefefe;
 	p
 	{
 		display: inline-block;
-		width: 70%;
-		vertical-align: middle;
-		padding: 17px;
+		width: 60%;
+		margin: 17px;
 	}
 	
-	.details
+	.button
 	{
 		display: inline-block;
 		float: right;
-		margin: 10px 17px;
-		width: 70px;
+		margin: 10px 17px 0 0;
+		max-width: 40%;
+	}
+
+	.extract
+	{
+		display: inline-block;
+		width: 60%;
+		margin: 0 17px 17px 17px;
+		padding: 8px;
+		background: $extract;
+		@include border-radius(5px);
+		cursor: pointer;
+
+		p
+		{
+			margin: 0;
+			width: 100%;
+		}
+
+		&:hover, &:focus, &:active
+		{
+			background: darken($extract, 10%);
+		}
 	}
 }
