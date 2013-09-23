@@ -20,6 +20,7 @@ $hr-blue:  #8f5bff;
 	padding: 0px;
 	margin: 0px;
 	text-align: left;
+	z-index: 0;
 }
 
 .hr-green
@@ -50,9 +51,9 @@ $hr-blue:  #8f5bff;
 
 
 /* Buttons */
-$details:     #2ccc6f;
-$EDT-red: 	  #e94c3d;
-$EDT-blue:    #8f5bff;
+$button-green:     #2ccc6f;
+$button-red: 	  #e94c3d;
+$button-blue:    #8f5bff;
 $button-text: #fefefe;
 
 @mixin button
@@ -65,36 +66,36 @@ $button-text: #fefefe;
 	cursor: pointer;
 }
 
-.details
+.button-green
 {
 	@include button;
-	background: $details;
+	background: $button-green;
 
 	&:hover, &:focus, &:active
 	{
-		background: darken($details, 20%);
+		background: darken($button-green, 20%);
 	}
 }
 
-.EDT-red
+.button-red
 {
 	@include button;
-	background: $EDT-red;
+	background: $button-red;
 
 	&:hover, &:focus, &:active
 	{
-		background: darken($EDT-red, 20%);
+		background: darken($button-red, 20%);
 	}
 }
 
-.EDT-blue
+.button-blue
 {
 	@include button;
-	background: $EDT-blue;
+	background: $button-blue;
 
 	&:hover, &:focus, &:active
 	{
-		background: darken($EDT-blue, 20%);
+		background: darken($button-blue, 20%);
 	}
 }
 

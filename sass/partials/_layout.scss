@@ -9,6 +9,50 @@ $body-background:		#ebebeb;
 
 
 /***********************************************************************************/
+/* Aside */
+$aside-background:	#2c3d51;
+$aside-color:       #f0eef4;
+$picture-border:    #3d4e62;
+
+.aside
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 230px;
+	background: $aside-background;
+	z-index: 1;
+	color: $aside-color;
+}
+
+.head-aside
+{
+	.profil-picture
+	{
+		height: 70px;
+		margin: 35px 75px 10px 75px;
+		padding: 3px;
+		border: $picture-border solid 3px;
+	}
+
+	.profil-name
+	{
+		display: block;
+		text-align: center;
+	}
+	
+	padding: 0 0 12px 0;
+	border-bottom: darken($body-background, 60%) solid 1px;
+}
+
+
+
+
+
+
+
+/***********************************************************************************/
 /* Articles */
 $article-background:	#fefefe;
 $extract:              #e6e6e6;
@@ -44,7 +88,7 @@ $extract:              #e6e6e6;
 		margin: 2px 0;
 	}
 
-	.author-picture
+	.participants-pictures
 	{
 		height: 25px;
 	}
