@@ -1,6 +1,7 @@
 $body-background:		#ebebeb;
 $article-background:	#fefefe;
 
+
 .body
 {
 	background: $body-background;
@@ -16,12 +17,55 @@ $article-background:	#fefefe;
 	background: $article-background;
 	margin: 10px auto;
 	width: 70%;
-	padding: 17px 25px;
+	max-width: 800px;
 
-	@include border-radius(5px);
+	@include border-radius(10px);
 }
 
 .head-article
 {
-	border-bottom: 2px $body-background;
+	border-bottom: 2px solid $body-background;
+	max-width: 100%;
+	padding: 17px;
+	@include pie-clearfix;
+	text-align: right;
+
+	*
+	{
+		display: inline;
+		vertical-align: middle;
+		margin: 0 7px;
+	}
+
+	.h3
+	{
+		float: left;
+		margin: 2px 0;
+	}
+
+	.author-picture
+	{
+		height: 25px;
+	}
+}
+
+.content-article
+{
+	@include pie-clearfix;
+
+	p
+	{
+		display: inline-block;
+		width: 70%;
+		vertical-align: middle;
+		padding: 17px;
+	}
+	
+	.details
+	{
+		display: inline-block;
+		float: right;
+		margin: 10px 17px;
+		width: 70px;
+	}
 }

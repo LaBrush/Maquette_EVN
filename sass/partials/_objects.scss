@@ -1,0 +1,51 @@
+/* Images */
+.round-img
+{
+	@include border-radius(100px);
+}
+
+
+/* Hr */
+$hr-green: #2ccc6f;
+
+@mixin hr
+{
+	position: relative;
+	top: -4px;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.hr-green
+{
+	@include hr;
+	border: 2px solid $hr-green;
+
+	width: 120px;
+}
+
+
+/* Buttons */
+$details: #2ccc6f;
+$button-text: #fefefe;
+
+@mixin button
+{
+	border: none;
+	@include border-radius(100px);
+	padding: 4px;
+	color: $button-text;
+	font-size: 0.8em;
+}
+
+.details
+{
+	@include button;
+	background: $details;
+
+	&:hover, &:focus, &:active
+	{
+		background: darken($details, 20%);
+	}
+}
