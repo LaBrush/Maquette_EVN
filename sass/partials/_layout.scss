@@ -9,21 +9,30 @@ $body-background:		#ebebeb;
 
 
 /***********************************************************************************/
-/* Aside */
-$aside-background:	#2c3d51;
-$aside-color:       #f0eef4;
+/* Header */
+.header
+{
+	margin: 30px 255px;
+}
+
+
+
+/***********************************************************************************/
+/* Aside gauche */
+$aside-left-background:	#2c3d51;
+$aside-left-color:       #f0eef4;
 $picture-border:    #3d4e62;
 
-.aside
+.aside-left
 {
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 230px;
-	background: $aside-background;
+	background: $aside-left-background;
 	z-index: 1;
-	color: $aside-color;
+	color: $aside-left-color;
 }
 
 .head-aside
@@ -50,20 +59,59 @@ $picture-border:    #3d4e62;
 
 
 
+/***********************************************************************************/
+/* Aside droit */
+$aside-right-background:	#d2d2d2;
+$aside-right-color:         #6a696a;
+
+.aside-right
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 230px;
+	background: $aside-right-background;
+	z-index: 1;
+	color: $aside-right-color;
+
+	p
+	{
+		display: block;
+		text-align: center;
+		margin-top: 40%;
+	}
+}
+
+
+
+
+
 
 
 /***********************************************************************************/
-/* Articles */
+/* Section */
 $article-background:	#fefefe;
 $extract:              #e6e6e6;
 
+.section
+{
+	padding: 15px 255px;
+	@include pie-clearfix;
+}
+
+.tri
+{
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+
 .article
 {
+	width: 100%;
+	margin-bottom: 15px;
 	background: $article-background;
-	margin: 15px auto;
-	width: 70%;
-	max-width: 800px;
-
 	@include border-radius(10px);
 }
 
