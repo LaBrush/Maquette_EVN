@@ -10,9 +10,12 @@ $body-background:		#ebebeb;
 
 /***********************************************************************************/
 /* Header */
+$header-color:  #898989;
+
 .header
 {
-	margin: 30px 255px;
+	margin: 30px 265px;
+	color: $header-color;
 }
 
 
@@ -55,6 +58,21 @@ $picture-border:    #3d4e62;
 	border-bottom: darken($body-background, 60%) solid 1px;
 }
 
+.links-aside
+{
+	padding: 20px;
+	&>li
+	{
+		display: block;
+		margin: 10px 0;
+
+		&>li
+		{
+
+		}
+	} 
+}
+
 
 
 
@@ -92,19 +110,27 @@ $aside-right-color:         #6a696a;
 /***********************************************************************************/
 /* Section */
 $article-background:	#fefefe;
-$extract:              #e6e6e6;
+$extract:               #fefefe;
 
 .section
 {
-	padding: 15px 255px;
+	padding: 15px 265px;
 	@include pie-clearfix;
+
+	.slogan
+	{
+		color: $header-color;
+	}
 }
 
 .tri
 {
+	@include box-sizing(border-box);
 	display: block;
 	width: 100%;
 	text-align: right;
+	padding: 5px;
+	color: $header-color;
 }
 
 .article
@@ -112,14 +138,14 @@ $extract:              #e6e6e6;
 	width: 100%;
 	margin-bottom: 15px;
 	background: $article-background;
-	@include border-radius(10px);
+	@include border-radius(7px);
 }
 
 .head-article
 {
 	border-bottom: 2px solid $body-background;
 	max-width: 100%;
-	padding: 17px;
+	padding: 10px 17px;
 	@include pie-clearfix;
 	text-align: right;
 
