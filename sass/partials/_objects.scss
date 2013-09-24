@@ -73,7 +73,7 @@ $button-text: #fefefe;
 
 	&:hover, &:focus, &:active
 	{
-		background: darken($button-green, 20%);
+		background: darken($button-green, 5%);
 	}
 }
 
@@ -84,7 +84,7 @@ $button-text: #fefefe;
 
 	&:hover, &:focus, &:active
 	{
-		background: darken($button-red, 20%);
+		background: darken($button-red, 5%);
 	}
 }
 
@@ -95,7 +95,7 @@ $button-text: #fefefe;
 
 	&:hover, &:focus, &:active
 	{
-		background: darken($button-blue, 20%);
+		background: darken($button-blue, 5%);
 	}
 }
 
