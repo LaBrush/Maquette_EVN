@@ -193,19 +193,11 @@ $extract:               #fefefe;
 		width: 60%;
 		margin: 0 17px 17px 17px;
 		padding: 8px;
-		background: $extract;
-		@include border-radius(5px);
-		cursor: pointer;
 
 		p
 		{
 			margin: 0;
 			width: 100%;
-		}
-
-		&:hover, &:focus, &:active
-		{
-			background: darken($extract, 10%);
 		}
 	}
 }
