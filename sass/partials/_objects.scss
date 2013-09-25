@@ -8,43 +8,24 @@
 
 
 /* Hr */
-$hr-green: #2ccc6f;
-$hr-red:   #e94c3d;
-$hr-blue:  #8f5bff;
+$border-green: #2ccc6f;
+$border-red:   #e94c3d;
+$border-blue:  #8f5bff;
 
-@mixin hr
+
+.border-green
 {
-	position: relative;
-	top: -4px;
-	display: block;
-	padding: 0px;
-	margin: 0px;
-	text-align: left;
-	z-index: 0;
+	border-left: 3px solid $border-green;
 }
 
-.hr-green
+.border-red
 {
-	@include hr;
-	border: 2px solid $hr-green;
-
-	width: 120px;
+	border-left: 3px solid $border-red;
 }
 
-.hr-red
+.border-blue
 {
-	@include hr;
-	border: 2px solid $hr-red;
-
-	width: 120px;
-}
-
-.hr-blue
-{
-	@include hr;
-	border: 2px solid $hr-blue;
-
-	width: 120px;
+	border-left: 3px solid $border-blue;
 }
 
 
@@ -52,14 +33,14 @@ $hr-blue:  #8f5bff;
 
 /* Buttons */
 $button-green:     #2ccc6f;
-$button-red: 	  #e94c3d;
-$button-blue:    #8f5bff;
-$button-text: #fefefe;
+$button-red: 	   #e94c3d;
+$button-blue:      #8f5bff;
+$button-text: 	   #fefefe;
 
 @mixin button
 {
 	border: none;
-	@include border-radius(100px);
+	@include border-radius(2px);
 	padding: 4px 10px;
 	color: $button-text;
 	font-size: 0.8em;
