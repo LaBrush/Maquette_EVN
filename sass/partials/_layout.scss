@@ -17,7 +17,6 @@ $logo-color: inherit;
 {
 	width: 100%;
 	position: fixed;
-	top: 0;
 	padding: 13px;
 	height: 24px;
 	background: $nav;
@@ -74,14 +73,12 @@ $logo-color: inherit;
 /* Section */
 $article-background:	rgba(250, 250, 250, 0);
 $extract:               $article-background;
-$menu: 					#dddddd;
 $menu-color: 			#fefefe;
 
 .section
 {
 	width: 100%;
 	padding: 120px 10% 20px 10%;
-	max-width: 100%;
 
 	@include box-sizing(border-box);
 }
@@ -91,12 +88,10 @@ $menu-color: 			#fefefe;
 {
 	display: block;
 	margin: -30px auto 70px auto;
-	width: 100%;
 	max-width: 800px;
 	max-height: 263px;
 	text-align: center;
 	color: $menu-color;
-	background: $menu;
 	@include pie-clearfix;
 	cursor: pointer;
 }
@@ -121,7 +116,6 @@ $menu-color: 			#fefefe;
 .article
 {
 	margin: 40px auto 60px auto;
-	width: 100%;
 	max-width: 800px;
 	padding: 0 0 0 15px;
 	background: $article-background;
@@ -131,7 +125,6 @@ $menu-color: 			#fefefe;
 .head-article
 {
 	border-bottom: 2px solid $article-background;
-	max-width: 100%;
 	@include pie-clearfix;
 	text-align: right;
 
@@ -174,7 +167,6 @@ $menu-color: 			#fefefe;
 
 		p
 		{
-			margin: 0;
 			width: 100%;
 		}
 	}
