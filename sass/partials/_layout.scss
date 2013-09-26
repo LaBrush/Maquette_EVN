@@ -11,7 +11,7 @@ $body-background:		rgb(250, 250, 250);
 /* Nav */
 $nav: rgba(230, 230, 230, 0.9);
 $logo: none;
-$logo-color: #666666;
+$logo-color: inherit;
 
 .nav
 {
@@ -74,6 +74,8 @@ $logo-color: #666666;
 /* Section */
 $article-background:	rgba(250, 250, 250, 0);
 $extract:               $article-background;
+$menu: 					#dddddd;
+$menu-color: 			#fefefe;
 
 .section
 {
@@ -83,6 +85,38 @@ $extract:               $article-background;
 
 	@include box-sizing(border-box);
 }
+
+
+.menu
+{
+	display: block;
+	margin: -30px auto 70px auto;
+	width: 100%;
+	max-width: 800px;
+	max-height: 263px;
+	text-align: center;
+	color: $menu-color;
+	background: $menu;
+	@include pie-clearfix;
+	cursor: pointer;
+}
+
+.li-menu
+{
+	display: inline-block;
+	width: 50%;
+	padding: 13px;
+	float: left;
+	@include box-sizing(border-box);
+}
+
+
+.section-title
+{
+	text-align: center;
+	font-size: 1.8em;
+}
+
 
 .article
 {
