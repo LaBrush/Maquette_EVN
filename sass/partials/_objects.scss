@@ -1,4 +1,5 @@
 /* Menu */
+$accueil: 	#2c3d51;
 $notes: 	#2ccc6f;
 $devoirs: 	darken(#2ccc6f, 5%);
 $cours: 	darken(#2ccc6f, 10%);
@@ -6,52 +7,19 @@ $agenda: 	#e94c3d;
 $absences: 	darken(#e94c3d, 5%);
 $vie-lyceenne: darken(#e94c3d, 10%);
 
-.notes {background: $notes;}
-.devoirs {background: $devoirs;}
-.cours {background: $cours;}
-.agenda {background: $agenda;}
-.absences {background: $absences;}
-.vie-lyceenne {background: $vie-lyceenne;}
-
-
-
-
-/* Hr */
-.border-notes
-{
-	border-left: 3px solid $notes;
-}
-
-.border-devoirs
-{
-	border-left: 3px solid $devoirs;
-}
-
-.border-cours
-{
-	border-left: 3px solid $cours;
-}
-
-.border-agenda
-{
-	border-left: 3px solid $agenda;
-}
-
-.border-absences
-{
-	border-left: 3px solid $absences;
-}
-
-.border-vie-lyceenne
-{
-	border-left: 3px solid $vie-lyceenne;
-}
-
+.accueil {border-left: 4px solid $accueil;}
+.notes {border-left: 4px solid $notes;}
+.devoirs {border-left: 4px solid $devoirs;}
+.cours {border-left: 4px solid $cours;}
+.agenda {border-left: 4px solid $agenda;}
+.absences {border-left: 4px solid $absences;}
+.vie-lyceenne {border-left: 4px solid $vie-lyceenne;}
 
 
 
 /* Buttons */
 $button-text: 	#fefefe;
+$show-aside: 	#2c3d51;
 
 @mixin button
 {
@@ -129,4 +97,27 @@ $button-text: 	#fefefe;
 	}
 }
 
+.show-aside-open
+{
+	@include button;
+	font-size: 1.5em;
+	font-weight: 700;
+	@include border-radius(0);
+	background: $show-aside;
+}
 
+.show-aside-closed
+{
+	@include button;
+	font-size: 1.5em;
+	font-weight: 700;
+	@include border-radius(0);
+	background: $show-aside;
+}
+
+
+/* Other */
+.hidden
+{
+	visibility: hidden;
+}

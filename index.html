@@ -20,25 +20,31 @@
 		</div>
 	</nav>
 
-	<section class="section">
+	<aside class="aside-left">
+		<button class="show-aside-open" onClick="OpenAside()"><</button>
+		<button class="show-aside-closed hidden" onClick="CloseAside()">></button>
 
 		<div class="menu">
 			<ul>
+				<li class="h2 li-menu accueil">Accueil</li>
 				<li class="h3 li-menu notes">Notes</li>
-				<li class="h3 li-menu agenda">Agenda</li>
 				<li class="h3 li-menu devoirs">Devoirs</li>
-				<li class="h3 li-menu absences">Absences</li>
 				<li class="h3 li-menu cours">Cours</li>
+				<li class="h3 li-menu agenda">Agenda</li>
+				<li class="h3 li-menu absences">Absences</li>
 				<li class="h3 li-menu vie-lyceenne">Vie lycéenne</li>
 			</ul>
 		</div>
+	</aside>
+
+	<section class="section">
 
 		<div class="article">
 			<h3 class="section-title">Quoi de neuf ?</h3>
 		</div>
 
 
-		<article class="article border-notes">
+		<article class="article notes">
 			<div class="head-article">
 				<h3 class="h2">Note ajoutée</h3>
 				<span class="small bold">Histoire - SI1 et SI2</span>
@@ -51,7 +57,7 @@
 			</div>
 		</article>
 
-		<article class="article border-agenda">
+		<article class="article agenda">
 			<div class="head-article">
 				<h3 class="h2">Heure déplacée</h3>
 				<span class="small bold">Espagnol - SI1 et ES4</span>
@@ -64,7 +70,7 @@
 			</div>
 		</article>
 
-		<article class="article border-cours">
+		<article class="article cours">
 			<div class="head-article">
 				<h3 class="h2">Cours publié</h3>
 				<span class="small bold">Histoire - SI1 et SI2</span>
@@ -84,7 +90,7 @@
 			</div>
 		</article>
 
-		<article class="article border-devoirs">
+		<article class="article devoirs">
 			<div class="head-article">
 				<h3 class="h2">Devoirs ajoutés</h3>
 				<span class="small bold">Mathémathiques - SI1</span>

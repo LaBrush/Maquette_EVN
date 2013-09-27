@@ -69,28 +69,43 @@ $logo-color: inherit;
 }
 
 
+
 /***********************************************************************************/
-/* Section */
-$article-background:	rgba(250, 250, 250, 0);
-$extract:               $article-background;
-$menu-color: 			#fefefe;
+/* Aside gauche */
+$aside-left-background:	#2c3d51;
+$aside-left-color:      #f0eef4;
+$menu-color: 			none;
 
-.section
+.show-aside-open
 {
-	width: 100%;
-	padding: 120px 10% 20px 10%;
-
-	@include box-sizing(border-box);
+	float: right;
+	position: relative;
+	margin: 0;
+	left: 30px;
 }
 
+.aside-left
+{
+	position: fixed;
+	top: 50px;
+	left: 0;
+	height: 100%;
+	width: 200px;
+	background: $aside-left-background;
+	color: $aside-left-color;
+	z-index: 1;
+}
+
+.aside-left-closed
+{
+	visibility: none;
+}
 
 .menu
 {
-	display: block;
-	margin: -30px auto 70px auto;
-	max-width: 800px;
-	max-height: 263px;
-	text-align: center;
+	position: fixed;
+	top: 50px;
+	width: 200px;
 	color: $menu-color;
 	@include pie-clearfix;
 	cursor: pointer;
@@ -99,9 +114,24 @@ $menu-color: 			#fefefe;
 .li-menu
 {
 	display: inline-block;
-	width: 50%;
+	width: 100%;
 	padding: 13px;
 	float: left;
+	@include box-sizing(border-box);
+}
+
+
+
+/***********************************************************************************/
+/* Section */
+$article-background:	rgba(250, 250, 250, 0);
+$extract:               $article-background;
+
+.section
+{
+	width: 100%;
+	padding: 50px 10% 20px 10%;
+
 	@include box-sizing(border-box);
 }
 
