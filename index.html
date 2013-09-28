@@ -20,11 +20,11 @@
 		</div>
 	</nav>
 
-	<aside class="aside-left">
-		<button class="show-aside-open" onClick="OpenAside()"><</button>
-		<button class="show-aside-closed hidden" onClick="CloseAside()">></button>
+	<aside id="aside-left">
+		<button id="show-aside-open" onClick="OpenAside()"><</button>
+		<button id="show-aside-hidden" onClick="CloseAside()">></button>
 
-		<div class="menu">
+		<div id="menu">
 			<ul>
 				<li class="h2 li-menu accueil">Accueil</li>
 				<li class="h3 li-menu notes">Notes</li>
@@ -107,6 +107,43 @@
 			</div>
 		</article>
 	</section>
+
+	<script type="text/javascript">
+
+		var OpenAside = function(){
+			var button = document.getElementById("show-aside-hidden");
+			button.id = "show-aside-closed";
+
+			var button = document.getElementById("show-aside-open");
+			button.id = "show-aside-hidden";
+
+
+			var button = document.getElementById("aside-left");
+			button.id = "aside-left-closed";
+
+			var button = document.getElementById("menu");
+			button.id = "menu-closed";
+		}
+
+		var CloseAside = function(){
+			var button = document.getElementById("show-aside-hidden");
+			button.id = "show-aside-open";
+
+			var button = document.getElementById("show-aside-closed");
+			button.id = "show-aside-hidden";
+
+
+			var button = document.getElementById("aside-left-closed");
+			button.id = "aside-left";
+
+			var button = document.getElementById("menu-closed");
+			button.id = "menu";
+		}
+
+		window.onload = function(){
+
+	    }
+	</script>
 
 	
 </body>

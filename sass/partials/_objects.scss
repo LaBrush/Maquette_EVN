@@ -97,7 +97,7 @@ $show-aside: 	#2c3d51;
 	}
 }
 
-.show-aside-open
+#show-aside-open
 {
 	@include button;
 	font-size: 1.5em;
@@ -106,7 +106,7 @@ $show-aside: 	#2c3d51;
 	background: $show-aside;
 }
 
-.show-aside-closed
+#show-aside-closed
 {
 	@include button;
 	font-size: 1.5em;
@@ -117,7 +117,7 @@ $show-aside: 	#2c3d51;
 
 
 /* Other */
-.hidden
+#show-aside-hidden
 {
 	visibility: hidden;
 }
