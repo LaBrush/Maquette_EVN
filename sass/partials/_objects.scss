@@ -101,7 +101,6 @@ $show-aside: 	#2c3d51;
 {
 	@include button;
 	font-size: 1.5em;
-	font-weight: 700;
 	@include border-radius(0);
 	background: $show-aside;
 }
@@ -110,7 +109,6 @@ $show-aside: 	#2c3d51;
 {
 	@include button;
 	font-size: 1.5em;
-	font-weight: 700;
 	@include border-radius(0);
 	background: $show-aside;
 }
