@@ -9,10 +9,10 @@ $body:		rgb(250, 250, 250);
 
 /***********************************************************************************/
 /* Header */
-$header: rgba(230, 230, 230, 0.9);
-$user: #1a736f;
+$header:     rgba(230, 230, 230, 0.9);
+$user:       #e67e22;
 $user-color: #fefefe;
-$logo: #1a736f;
+$logo:       #e67e22;
 $logo-color: #fefefe;
 
 .header
@@ -39,25 +39,15 @@ $logo-color: #fefefe;
 	background: $logo;
 	color: $logo-color;
 
-	cursor: pointer;
-
 	.h2
 	{
 		display: inline-block;
 	}
+}
 
-	.span
-	{
-		float: right;
-		display: inline-block;
-		vertical-align: middle;		
-		font-size: 1.1em;
-	}
-
-	&:hover, &:active, &:focus
-	{
-		background: darken($user, 5%);
-	}
+.slogan
+{
+	float: right;
 }
 
 .user
@@ -93,14 +83,43 @@ $logo-color: #fefefe;
 
 /***********************************************************************************/
 /* Nav */
+$button:        $header;
+$button-color:  inherit;
 $nav:	        $header;
 $nav-color:     inherit;
 $menu-color: 	inherit;
 
-#nav
+.button-menu
 {
 	position: fixed;
 	top: 50px;
+	left: 0;
+	width: 200px;
+	height: 50px;
+	padding: 15px 20px;
+	@include box-sizing(border-box);
+	z-index: 2;
+
+	font-size: 1.2em;
+	background: $button;
+	color: $button-color;
+	cursor: pointer;
+
+	i:before
+	{
+		float: right;
+	}
+
+	&:hover, &:active, &:focus
+	{
+		background: darken($button, 5%);
+	}
+}
+
+#nav
+{
+	position: fixed;
+	top: 100px;
 	height: 100%;
 	width: 200px;
 	background: $nav;
@@ -127,11 +146,16 @@ $menu-color: 	inherit;
 #menu
 {
 	position: fixed;
-	top: 50px;
+	top: 100px;
 	width: 200px;
 	color: $menu-color;
 	@include pie-clearfix;
 	cursor: pointer;
+
+	.accueil
+	{
+		background: darken($nav, 5%);
+	}
 
 	@include transition(all ease 0.3s);
 }
