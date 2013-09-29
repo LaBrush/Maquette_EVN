@@ -1,5 +1,5 @@
 /* Menu */
-$accueil: 	#2c3d51;
+$accueil: 	darken($header, 10%);;
 $notes: 	#2ccc6f;
 $devoirs: 	darken(#2ccc6f, 5%);
 $cours: 	darken(#2ccc6f, 10%);
@@ -16,14 +16,15 @@ $vie-lyceenne: darken(#e94c3d, 10%);
 .vie-lyceenne {border-left: 4px solid $vie-lyceenne;}
 
 
-
+/**************************************************************************/
 /* Buttons */
 $button-text: 	#fefefe;
-$show-aside: 	#2c3d51;
+$show-aside: 	#1a736f;
 
 @mixin button
 {
 	border: none;
+	margin: 0;
 	@include border-radius(2px);
 	padding: 4px 10px;
 	color: $button-text;
@@ -97,20 +98,28 @@ $show-aside: 	#2c3d51;
 	}
 }
 
-#show-aside-open
+@mixin show-aside
 {
 	@include button;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	@include border-radius(0);
 	background: $show-aside;
+	padding: 0 25px;
+
+	&:hover, &:focus, &:active
+	{
+		background: darken($show-aside, 5%);
+	}
+}
+
+#show-aside-open
+{
+	@include show-aside;
 }
 
 #show-aside-closed
 {
-	@include button;
-	font-size: 1.5em;
-	@include border-radius(0);
-	background: $show-aside;
+	@include show-aside;
 }
 
 

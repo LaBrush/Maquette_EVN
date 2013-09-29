@@ -8,21 +8,26 @@
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 	<link href="stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!--[if IE 7]>
+	  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
 </head>
 
 <body class="body">
 	
-	<nav class="nav">
-		<div class="logo"><h1 class="h2">Kub</h1></div>
+	<header class="header">
+		<div id="logo" onClick="OpenAside()">
+			<h1 class="h2">Kub</h1>
+			<span class="span">Menu <i class="icon-chevron-sign-down"></i></span>
+		</div>
+
 		<div class="user">
 			<h2 class="profil-name h3">Nathan Rajohnson</h2>
 			<img src="images/profil.png" alt="" class="profil-picture">
 		</div>
-	</nav>
+	</header>
 
-	<aside id="aside-left-closed">
-		<button id="show-aside-hidden" onClick="OpenAside()"><</button>
-		<button id="show-aside-closed" onClick="CloseAside()">Menu ></button>
+	<nav id="nav-closed">
 
 		<div id="menu-closed">
 			<ul>
@@ -35,7 +40,7 @@
 				<li class="h3 li-menu vie-lyceenne">Vie lycéenne</li>
 			</ul>
 		</div>
-	</aside>
+	</nav>
 
 	<section class="section">
 
@@ -110,39 +115,39 @@
 
 	<script type="text/javascript">
 
+		var hidden = true;
+
 		var OpenAside = function(){
-			var button = document.getElementById("show-aside-hidden");
-			button.id = "show-aside-closed";
 
-			var button = document.getElementById("show-aside-open");
-			button.id = "show-aside-hidden";
+			if(hidden == false){
 
+				var button = document.getElementById("nav");
+				button.id = "nav-closed";
 
-			var button = document.getElementById("aside-left");
-			button.id = "aside-left-closed";
+				var button = document.getElementById("menu");
+				button.id = "menu-closed";
 
-			var button = document.getElementById("menu");
-			button.id = "menu-closed";
+				var button = document.getElementsByClassName("icon-chevron-sign-up");
+				button[0].className = "icon-chevron-sign-down";
+
+				hidden = true;
+			}
+
+			else {
+
+				var button = document.getElementById("nav-closed");
+				button.id = "nav";
+
+				var button = document.getElementById("menu-closed");
+				button.id = "menu";
+
+				var button = document.getElementsByClassName("icon-chevron-sign-down");
+				button[0].className = "icon-chevron-sign-up";
+
+				hidden = false;
+			}
 		}
 
-		var CloseAside = function(){
-			var button = document.getElementById("show-aside-hidden");
-			button.id = "show-aside-open";
-
-			var button = document.getElementById("show-aside-closed");
-			button.id = "show-aside-hidden";
-
-
-			var button = document.getElementById("aside-left-closed");
-			button.id = "aside-left";
-
-			var button = document.getElementById("menu-closed");
-			button.id = "menu";
-		}
-
-		window.onload = function(){
-
-	    }
 	</script>
 
 	

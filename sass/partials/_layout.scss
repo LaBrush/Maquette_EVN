@@ -1,43 +1,62 @@
-$body-background:		rgb(250, 250, 250);
+$body:		rgb(250, 250, 250);
 
 
 .body
 {
-	background: $body-background;
+	background: $body;
 }
 
 
 /***********************************************************************************/
-/* Nav */
-$nav: rgba(230, 230, 230, 0.9);
-$logo: none;
-$logo-color: inherit;
+/* Header */
+$header: rgba(230, 230, 230, 0.9);
+$user: #1a736f;
+$user-color: #fefefe;
+$logo: #1a736f;
+$logo-color: #fefefe;
 
-.nav
+.header
 {
 	width: 100%;
 	position: fixed;
 	padding: 13px;
 	height: 24px;
-	background: $nav;
+	background: $header;
 
 	z-index: 10;
 }
 
-.logo
+#logo
 {
 	position: fixed;
 	top: 0;
 	left: 0;
+	width: 200px;
+	height: 50px;
+	padding: 15px 20px;
+	@include box-sizing(border-box);
 
 	background: $logo;
 	color: $logo-color;
 
+	cursor: pointer;
+
 	.h2
 	{
 		display: inline-block;
-		vertical-align: middle;
-		margin: 15px 28px;
+	}
+
+	.span
+	{
+		float: right;
+		display: inline-block;
+		vertical-align: middle;		
+		font-size: 1.1em;
+	}
+
+	&:hover, &:active, &:focus
+	{
+		background: darken($user, 5%);
 	}
 }
 
@@ -47,10 +66,12 @@ $logo-color: inherit;
 	top: 0;
 	right: 0;
 	cursor: pointer;
+	background: $user;
+	color: $user-color;
 
 	&:hover, &:active, &:focus
 	{
-		background: darken($nav, 5%);
+		background: darken($user, 5%);
 	}
 }
 
@@ -71,52 +92,36 @@ $logo-color: inherit;
 
 
 /***********************************************************************************/
-/* Aside gauche */
-$aside-left-background:	#2c3d51;
-$aside-left-color:      #f0eef4;
-$menu-color: 			inherit;
+/* Nav */
+$nav:	        $header;
+$nav-color:     inherit;
+$menu-color: 	inherit;
 
-#show-aside-open
-{
-	float: right;
-	position: relative;
-	margin: 0;
-	left: 30px;
-}
-
-#show-aside-closed
-{
-	float: right;
-	position: relative;
-	margin: 0;
-	left: 95px;
-}
-
-#aside-left
+#nav
 {
 	position: fixed;
 	top: 50px;
 	height: 100%;
 	width: 200px;
-	background: $aside-left-background;
-	color: $aside-left-color;
+	background: $nav;
+	color: $nav-color;
 	z-index: 1;
 	
-	@include transition(all ease 0.5s);
+	@include transition(all ease 0.3s);
 }
 
-#aside-left-closed
+#nav-closed
 {
 	position: fixed;
-	top: 50px;
-	left: -200px;
+	top: -100%;
+	left: 0;
 	height: 100%;
 	width: 200px;
-	background: $aside-left-background;
-	color: $aside-left-color;
+	background: $nav;
+	color: $nav-color;
 	z-index: 1;
 
-	@include transition(all ease 0.5s);
+	@include transition(all ease 0.3s);
 }
 
 #menu
@@ -128,20 +133,20 @@ $menu-color: 			inherit;
 	@include pie-clearfix;
 	cursor: pointer;
 
-	@include transition(all ease 0.5s);
+	@include transition(all ease 0.3s);
 }
 
 #menu-closed
 {
 	position: fixed;
-	top: 50px;
-	left: -200px;
+	top: -100%;
+	left: 0;
 	width: 200px;
 	color: $menu-color;
 	@include pie-clearfix;
 	cursor: pointer;
 
-	@include transition(all ease 0.5s);
+	@include transition(all ease 0.3s);
 }
 
 .li-menu
@@ -157,8 +162,8 @@ $menu-color: 			inherit;
 
 /***********************************************************************************/
 /* Section */
-$article-background:	rgba(250, 250, 250, 0);
-$extract:               $article-background;
+$article:	rgba(250, 250, 250, 0);
+$extract:               $article;
 
 .section
 {
@@ -181,13 +186,13 @@ $extract:               $article-background;
 	margin: 40px auto 60px auto;
 	max-width: 800px;
 	padding: 0 0 0 15px;
-	background: $article-background;
+	background: $article;
 	@include box-sizing(border-box);
 }
 
 .head-article
 {
-	border-bottom: 2px solid $article-background;
+	border-bottom: 2px solid $article;
 	@include pie-clearfix;
 	text-align: right;
 
