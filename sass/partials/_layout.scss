@@ -83,11 +83,13 @@ $logo-color: #fefefe;
 
 /***********************************************************************************/
 /* Nav */
-$button:        $header;
-$button-color:  inherit;
-$nav:	        $header;
-$nav-color:     inherit;
-$menu-color: 	inherit;
+$button:        		$header;
+$button-color:  		inherit;
+$nav:	        		$header;
+$nav-color:     		inherit;
+$menu-color: 			inherit;
+$notifications: 		$logo;
+$notifications-color: 	$logo-color;
 
 .button-menu
 {
@@ -168,82 +170,29 @@ $menu-color: 	inherit;
 	@include transition(all ease 0.3s);
 }
 
-// .li-menu
-// {
-// 	display: inline-block;
-// 	width: 100%;
-// 	padding: 13px;
-// 	float: left;
-// 	@include box-sizing(border-box);
-
-// 	&:hover, &:active, &:focus
-// 	{
-// 		background: darken($button, 5%);
-// 	}
-// }
-
-
-nav div ul 
+.li-menu
 {
-	li 
+	display: inline-block;
+	width: 100%;
+	padding: 13px;
+	float: left;
+	@include box-sizing(border-box);
+
+	&:hover, &:active, &:focus
 	{
-		display: inline-block;
-		width: 100%;
-		padding: 10px;
-		float: left;
-		@include box-sizing(border-box);
-
-		&:hover, &:active, &:focus
-		{
-			background: darken($button, 5%);
-		}
-
-		&.parent
-		{
-			font-size: 1.1em;
-		}
-
-		&.active
-		{
-			background-color: darken($button, 10%);
-		}
-
-		&:not(:active)
-		{
-			opacity: 0.8 ;
-		}
-
-		.number
-		{
-			float: right ;
-
-			background-color: #ff7b00 ;
-			color: white ;
-			font-size: 1em ;
-
-			border-radius: 1000px ;
-			padding: 0 8px ; 
-		}
+		background: darken($button, 5%);
 	}
 
-	&.color-blue .colored
+	.notifications
 	{
-		border-left: 5px solid #0084ff ;
-	}
+		float: right;
 
-	&.color-green .colored
-	{
-		border-left: 5px solid #00bb2f ;
-	}
+		background-color: $notifications;
+		color: $notifications-color;
+		font-size: 0.8em;
 
-	&.color-orange .colored
-	{
-		border-left: 5px solid #ff7b00 ;
-	}
-
-	&.color-red .colored
-	{
-		border-left: 5px solid #ff0004 ;
+		@include border-radius(50px);
+		padding: 0 8px; 
 	}
 }
 
@@ -251,37 +200,31 @@ nav div ul
 
 /***********************************************************************************/
 /* Section */
-$article:	rgba(250, 250, 250, 0);
-$extract:               $article;
-
 .section
 {
 	width: 100%;
-	padding: 90px 10% 20px 10%;
+	padding: 60px 10% 20px 10%;
 
 	@include box-sizing(border-box);
 }
 
+.article-news
+{
+	margin: 35px auto;
+	padding: 0 0 0 15px;
+	max-width: 800px;
+	@include pie-clearfix;
+}
 
 .section-title
 {
+	margin: 10px;
 	text-align: center;
 	font-size: 1.8em;
 }
 
-
-.article
-{
-	margin: 40px auto 60px auto;
-	max-width: 800px;
-	padding: 0 0 0 15px;
-	background: $article;
-	@include box-sizing(border-box);
-}
-
 .head-article
 {
-	border-bottom: 2px solid $article;
 	@include pie-clearfix;
 	text-align: right;
 
