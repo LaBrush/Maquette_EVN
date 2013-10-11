@@ -68,14 +68,7 @@ $logo-color: #fefefe;
 .profil-name
 {
 	display: inline-block;
-	vertical-align: middle;
-	margin: 0 10px;
-}
-
-.profil-picture
-{
-	display: inline-block;
-	height: 50px;
+	padding: 15px 30px;
 	vertical-align: middle;
 }
 
@@ -91,39 +84,12 @@ $menu-color: 			inherit;
 $notifications: 		$logo;
 $notifications-color: 	$logo-color;
 
-.button-menu
-{
-	position: fixed;
-	top: 50px;
-	left: 0;
-	width: 200px;
-	height: 50px;
-	padding: 15px 20px;
-	@include box-sizing(border-box);
-	z-index: 2;
-
-	font-size: 1.2em;
-	background: $button;
-	color: $button-color;
-	cursor: pointer;
-
-	i:before
-	{
-		float: right;
-	}
-
-	&:hover, &:active, &:focus
-	{
-		background: darken($button, 5%);
-	}
-}
-
 #nav
 {
 	position: fixed;
-	top: 100px;
-	height: 100%;
+	top: 50px;
 	width: 200px;
+	height: 100%;
 	background: $nav;
 	color: $nav-color;
 	z-index: 1;
@@ -131,50 +97,31 @@ $notifications-color: 	$logo-color;
 	@include transition(all ease 0.3s);
 }
 
-#nav-closed
+.button-menu
 {
-	position: fixed;
-	top: -100%;
-	left: 0;
-	height: 100%;
-	width: 200px;
-	background: $nav;
-	color: $nav-color;
-	z-index: 1;
-
-	@include transition(all ease 0.3s);
+	display: none;
 }
 
 #menu
 {
-	position: fixed;
-	top: 100px;
-	width: 200px;
+	height: 100%;
 	color: $menu-color;
 	@include pie-clearfix;
 	cursor: pointer;
 
 	@include transition(all ease 0.3s);
-}
 
-#menu-closed
-{
-	position: fixed;
-	top: -100%;
-	left: 0;
-	width: 200px;
-	color: $menu-color;
-	@include pie-clearfix;
-	cursor: pointer;
-
-	@include transition(all ease 0.3s);
+	.h3
+	{
+		padding: 12px;
+	}
 }
 
 .li-menu
 {
 	display: inline-block;
 	width: 100%;
-	padding: 13px;
+	padding: 8px 13px;
 	float: left;
 	@include box-sizing(border-box);
 
@@ -196,6 +143,30 @@ $notifications-color: 	$logo-color;
 	}
 }
 
+/* Code pour la version tablettes et mobiles */
+#nav-open
+{
+	position: absolute;
+	top: 100px;
+	width: 200px;
+	height: 100%;
+	background: $nav;
+	color: $nav-color;
+	z-index: 1;
+	
+	@include transition(all ease 0.3s);
+}
+
+#menu-open
+{
+	height: 100%;
+	color: $menu-color;
+	@include pie-clearfix;
+	cursor: pointer;
+
+	@include transition(all ease 0.3s);
+}
+
 
 
 /***********************************************************************************/
@@ -203,7 +174,7 @@ $notifications-color: 	$logo-color;
 .section
 {
 	width: 100%;
-	padding: 60px 10% 20px 10%;
+	padding: 75px 10% 20px 10%;
 
 	@include box-sizing(border-box);
 }

@@ -22,21 +22,20 @@
 		</div>
 		<div class="user">
 			<h2 class="profil-name h3">Nathan Rajohnson</h2>
-			<img src="images/profil.png" alt="" class="profil-picture">
 		</div>
 	</header>
 
 	<span class="button-menu" onClick="OpenAside()">
-		Menu <i class="icon-chevron-sign-down"></i>
+		Menu <i class="icon-chevron-sign-right"></i>
 	</span>
 
-	<nav id="nav-closed">
+	<nav id="nav">
 
-		<div id="menu-closed">
+		<div id="menu">
 			<ul>
 				<ul>
 					<li class="h3 li-menu accueil">Accueil</li>
-					<li class="li-menu">Mes notifications <span class="notifications">4</span></li>
+					<li class="li-menu">Nouveautés</li>
 					<li class="li-menu">Mes messages <span class="notifications">16</span></li>
 				</ul>
 				<ul>
@@ -59,8 +58,7 @@
 				<ul>
 					<li class="h3 li-menu vie-lyceenne">Vie lycéenne</li>
 					<li class="li-menu">Les conseils et assemblées</li>
-					<li class="li-menu">Les clubs</li>
-					<li class="li-menu">L'association sportive</li>
+					<li class="li-menu">Les clubs et l'AS</li>
 				</ul>
 			</ul>
 		</div>
@@ -69,7 +67,7 @@
 	<section class="section">
 
 		<div class="article-news">
-			<h3 class="section-title">Quoi de neuf ?</h3>
+			<h3 class="section-title">Nouveautés</h3>
 		</div>
 
 
@@ -145,33 +143,32 @@
 
 			if(hidden == false){
 
-				var button = document.getElementById("nav");
-				button.id = "nav-closed";
+				var button = document.getElementById("nav-open");
+				button.id = "nav";
 
-				var button = document.getElementById("menu");
-				button.id = "menu-closed";
+				var button = document.getElementById("menu-open");
+				button.id = "menu";
 
-				var button = document.getElementsByClassName("icon-chevron-sign-up");
-				button[0].className = "icon-chevron-sign-down";
+				var button = document.getElementsByClassName("icon-chevron-sign-left");
+				button[0].className = "icon-chevron-sign-right";
 
 				hidden = true;
 			}
 
 			else {
 
-				var button = document.getElementById("nav-closed");
-				button.id = "nav";
+				var button = document.getElementById("nav");
+				button.id = "nav-open";
 
-				var button = document.getElementById("menu-closed");
-				button.id = "menu";
+				var button = document.getElementById("menu");
+				button.id = "menu-open";
 
-				var button = document.getElementsByClassName("icon-chevron-sign-down");
-				button[0].className = "icon-chevron-sign-up";
+				var button = document.getElementsByClassName("icon-chevron-sign-right");
+				button[0].className = "icon-chevron-sign-left";
 
 				hidden = false;
 			}
 		}
-
 	</script>
 
 	

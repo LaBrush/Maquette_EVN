@@ -108,34 +108,3 @@ $show-aside: 	#1a736f;
 		background: darken($vie-lyceenne, 5%);
 	}
 }
-
-@mixin show-aside
-{
-	@include button;
-	font-size: 1.2em;
-	@include border-radius(0);
-	background: $show-aside;
-	padding: 0 25px;
-
-	&:hover, &:focus, &:active
-	{
-		background: darken($show-aside, 5%);
-	}
-}
-
-#show-aside-open
-{
-	@include show-aside;
-}
-
-#show-aside-closed
-{
-	@include show-aside;
-}
-
-
-/* Other */
-#show-aside-hidden
-{
-	visibility: hidden;
-}
