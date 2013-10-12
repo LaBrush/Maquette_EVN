@@ -94,7 +94,7 @@ $notifications-color: 	$logo-color;
 	color: $nav-color;
 	z-index: 1;
 	
-	@include transition(all ease 0.3s);
+	@include transition(all ease 0.4s);
 }
 
 .button-menu
@@ -109,7 +109,7 @@ $notifications-color: 	$logo-color;
 	@include pie-clearfix;
 	cursor: pointer;
 
-	@include transition(all ease 0.3s);
+	@include transition(all ease 0.4s);
 
 	.h3
 	{
@@ -146,15 +146,15 @@ $notifications-color: 	$logo-color;
 /* Code pour la version tablettes et mobiles */
 #nav-open
 {
-	position: absolute;
-	top: 100px;
+	position: fixed;
+	top: 50px;
 	width: 200px;
 	height: 100%;
 	background: $nav;
 	color: $nav-color;
 	z-index: 1;
 	
-	@include transition(all ease 0.3s);
+	@include transition(all ease 0.4s);
 }
 
 #menu-open
@@ -164,7 +164,7 @@ $notifications-color: 	$logo-color;
 	@include pie-clearfix;
 	cursor: pointer;
 
-	@include transition(all ease 0.3s);
+	@include transition(all ease 0.4s);
 }
 
 

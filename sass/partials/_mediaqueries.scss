@@ -35,7 +35,7 @@
 	.button-menu
 	{
 		display: block;
-		position: fixed;
+		position: absolute;
 		top: 50px;
 		left: 0;
 		width: 200px;
@@ -62,8 +62,7 @@
 
 	#nav
 	{
-		top: 100px;
-		left: -100%;
+		top: -150%;
 		height: auto;
 	}
 
@@ -74,8 +73,13 @@
 
 	#menu
 	{
+		top: -100%;
+	}
+
+	#nav-open
+	{
+		position: absolute;
 		top: 100px;
-		left: -100%;
 	}
 }
 

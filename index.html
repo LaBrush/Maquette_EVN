@@ -26,7 +26,7 @@
 	</header>
 
 	<span class="button-menu" onClick="OpenAside()">
-		Menu <i class="icon-chevron-sign-right"></i>
+		Menu <i class="icon-chevron-sign-down"></i>
 	</span>
 
 	<nav id="nav">
@@ -39,8 +39,9 @@
 					<li class="li-menu">Mes messages <span class="notifications">16</span></li>
 				</ul>
 				<ul>
-					<li class="h3 li-menu work-table">Tables de travail</li>
+					<li class="h3 li-menu work-table">Espace de travail</li>
 					<li class="li-menu">Mes tables de travail</li>
+					<li class="li-menu">Mon fil d'Arianne</li>
 					<li class="li-menu">Les ressources</li>
 				</ul>
 				<ul>
@@ -149,8 +150,8 @@
 				var button = document.getElementById("menu-open");
 				button.id = "menu";
 
-				var button = document.getElementsByClassName("icon-chevron-sign-left");
-				button[0].className = "icon-chevron-sign-right";
+				var button = document.getElementsByClassName("icon-chevron-sign-up");
+				button[0].className = "icon-chevron-sign-down";
 
 				hidden = true;
 			}
@@ -163,8 +164,8 @@
 				var button = document.getElementById("menu");
 				button.id = "menu-open";
 
-				var button = document.getElementsByClassName("icon-chevron-sign-right");
-				button[0].className = "icon-chevron-sign-left";
+				var button = document.getElementsByClassName("icon-chevron-sign-down");
+				button[0].className = "icon-chevron-sign-up";
 
 				hidden = false;
 			}
