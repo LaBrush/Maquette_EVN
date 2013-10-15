@@ -1,18 +1,17 @@
 /* Menu */
-$accueil: 		#e67e22;
-$work-table: 	#c8d92f;
-$notes: 		#5bacad;
-$agenda: 		#2ccc6f;
-$absences: 		#d0384c;
-$vie-lyceenne: 	#9e66a2;
+$accueil: 				#e67e22;
+$espace-collaboratif: 	#c8d92f;
+$agenda: 				#2ccc6f;
+$bigbro: 					#d0384c;
+$vie-lyceenne: 			#9e66a2;
 
 .accueil {border-left: 4px solid $accueil;}
-.work-table {border-left: 4px solid $work-table;}
+.espace-collaboratif {border-left: 4px solid $espace-collaboratif;}
 .cours {border-left: 4px solid $agenda;}
 .devoirs {border-left: 4px solid $agenda;}
-.notes {border-left: 4px solid $notes;}
 .agenda {border-left: 4px solid $agenda;}
-.absences {border-left: 4px solid $absences;}
+.bigbro {border-left: 4px solid $bigbro;}
+.notes {border-left: 4px solid $bigbro;}
 .vie-lyceenne {border-left: 4px solid $vie-lyceenne;}
 
 
@@ -32,14 +31,14 @@ $show-aside: 	#1a736f;
 	cursor: pointer;
 }
 
-.button-notes
+.button-bigbro
 {
 	@include button;
-	background: $notes;
+	background: $bigbro;
 
 	&:hover, &:focus, &:active
 	{
-		background: darken($notes, 5%);
+		background: darken($bigbro, 5%);
 	}
 }
 
@@ -65,14 +64,14 @@ $show-aside: 	#1a736f;
 	}
 }
 
-.button-work-table
+.button-espace-collaboratif
 {
 	@include button;
-	background: $agenda;
+	background: $espace-collaboratif;
 
 	&:hover, &:focus, &:active
 	{
-		background: darken($agenda, 5%);
+		background: darken($espace-collaboratif, 5%);
 	}
 }
 
@@ -87,17 +86,6 @@ $show-aside: 	#1a736f;
 	}
 }
 
-.button-absences
-{
-	@include button;
-	background: $absences;
-
-	&:hover, &:focus, &:active
-	{
-		background: darken($absences, 5%);
-	}
-}
-
 .button-vie-lyceenne
 {
 	@include button;
@@ -106,5 +94,16 @@ $show-aside: 	#1a736f;
 	&:hover, &:focus, &:active
 	{
 		background: darken($vie-lyceenne, 5%);
+	}
+}
+
+.button-notes
+{
+	@include button;
+	background: $bigbro;
+
+	&:hover, &:focus, &:active
+	{
+		background: darken($bigbro, 5%);
 	}
 }
